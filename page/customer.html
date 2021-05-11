@@ -7,10 +7,14 @@
     <title>MISA Cuk Cuk</title>
     <link rel="stylesheet" href="../../css/common/layout.css" />
     <link rel="stylesheet" href="../../css/common/main.css" />
-    <link rel="stylesheet" href="../../css/pages/dictionary/customer.css" />
+    <link rel="stylesheet" href="../../css/common/grid.css" />
+    <link rel="stylesheet" href="../css/page/customer.css" />
+    <link rel="stylesheet" href="../css/common/button.css" />
+    <link rel="stylesheet" href="../css/page/filter.css" />
   </head>
 
   <body>
+    <!-- left -->
     <div class="body__left">
       <div class="sidebar">
         <div class="sidebar__toggle"></div>
@@ -43,7 +47,10 @@
         </div>
       </div>
     </div>
+
+    <!-- right -->
     <div class="body__right">
+      <!-- header -->
       <div class="header">
         <div class="header__restaurant">
           <select id="" name="restaurant">
@@ -53,14 +60,94 @@
             <option value="">Nhà hàng 04</option>
           </select>
         </div>
-
         <div class="header__personal">
           <div class="personal__avt"></div>
           <div class="personal__name">Hà Quốc Tuấn</div>
           <div class="personal__option item__icon icon--option"></div>
         </div>
       </div>
-      <div class="content">this is content</div>
+
+      <!-- content -->
+      <div class="content">
+        <div class="content__title">
+          <div class="title__name">Danh sách nhân viên</div>
+
+          <button class="content__feature btn--icon">
+            <div class="feature__icon"></div>
+            <div class="feature__text">Thêm nhân vien</div>
+          </button>
+        </div>
+
+        <div class="content__filter">
+          filter
+          <div class="filter__left"></div>
+          <div class="filter__right"></div>
+        </div>
+
+        <!-- grid-table -->
+        <div class="content__grid content__grid--customer">
+          <table>
+            <thead>
+              <tr>
+                <th>Mã nhân viên</th>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MF844</td>
+                <td>Hà Quốc tuấn</td>
+                <td>Nam</td>
+                <td>Ngày sinh</td>
+                <td>012334567</td>
+                <td>Hải Dương</td>
+              </tr>
+              <tr>
+                <td>MF844</td>
+                <td>Hà Quốc tuấn</td>
+                <td>Nam</td>
+                <td>Ngày sinh</td>
+                <td>012334567</td>
+                <td>Hải Dương</td>
+              </tr>
+              <tr>
+                <td>MF844</td>
+                <td>Hà Quốc tuấn</td>
+                <td>Nam</td>
+                <td>Ngày sinh</td>
+                <td>012334567</td>
+                <td>Hải Dương</td>
+              </tr>
+              <tr>
+                <td>MF844</td>
+                <td>Hà Quốc tuấn</td>
+                <td>Nam</td>
+                <td>Ngày sinh</td>
+                <td>012334567</td>
+                <td>Hải Dương</td>
+              </tr>
+              <tr>
+                <td>MF844</td>
+                <td>Hà Quốc tuấn</td>
+                <td>Nam</td>
+                <td>Ngày sinh</td>
+                <td>012334567</td>
+                <td>Hải Dương</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- pagination -->
+        <div class="content__pagination">pagination</div>
+      </div>
     </div>
+
+    <!-- jquery -->
+    <script src="../lib/jquery.js"></script>
   </body>
 </html>

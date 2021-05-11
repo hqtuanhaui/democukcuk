@@ -1,0 +1,20 @@
+.content__grid {
+  width: 100%;
+}
+
+.content__grid--customer {
+  height: calc(100% - 166px);
+}
+
+.content__grid table {
+  width: 100%;
+  padding: 0px 16px;
+}
+
+.content__grid th,
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 16px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
