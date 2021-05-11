@@ -27,7 +27,7 @@
 .feature__icon {
   width: 40px;
   height: 40px;
-  background-image: url(../../content/icon/dic-employee.png);
+  background-image: url("../../content/icon/dic-employee.png");
   background-size: 35px;
   background-repeat: no-repeat;
   background-position: 0px center;
