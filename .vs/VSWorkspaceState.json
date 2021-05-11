@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\lib",
+    "\\page"
   ],
+  "SelectedNode": "\\page\\customer.html",
   "PreviewInSolutionExplorer": false
 }

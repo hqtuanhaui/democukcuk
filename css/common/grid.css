@@ -19,3 +19,6 @@ td {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.content__grid--address {
+  max-width: 250px;
+}

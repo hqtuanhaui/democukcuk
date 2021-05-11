@@ -1,27 +1,71 @@
+$(document).ready(function () {
+  loadData();
+});
+
 function loadData() {
   //lay du lieu ve - ajax
   $.ajax({
     url: "http://cukcuk.manhnv.net/v1/Employees",
     method: "GET",
   })
-    .done(function (response) {
-      var data = response;
+    .done(function (res) {
+      let data = res;
       console.log(data);
-      //vong lap
-      debugger;
+      // vong lap qua res
       $.each(data, function (index, item) {
-        var tr = $(`<tr>
-          <td><div>MF844</div></td>
-          <td><div>Hà Quốc tuấn</div></td>
-          <td><div>Nam</div> </td>
-          <td><div>Ngày sinh</div></td>
-          <td><div> 012334567</div></td>
-          <td><div>Hải Dương</div></td>
-        </tr>`);
+        let tr = $(
+          `<tr>
+                <td>
+                  <div>` +
+            item["EmployeeCode"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["FullName"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["DateOfBirth"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["GenderName"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["PhoneNumber"] +
+            `</div>
+                </td>
+                <td class="content__grid--address">
+                  <div>` +
+            item["Address"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["Email"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["Salary"] +
+            `</div>
+                </td>
+                <td>
+                  <div>` +
+            item["DepartmentName"] +
+            `</div>
+                </td>
+                
+              </tr>`
+        );
 
-        //append vao element duoc tro den
         $("table tbody").append(tr);
       });
     })
-    .fail(function (response) {});
+    .fail(function (res) {});
 }
