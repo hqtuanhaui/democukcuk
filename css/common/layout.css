@@ -74,6 +74,10 @@
   top: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
+=======
+  background-color: bisque;
+>>>>>>> 2adf8f6f33646442816b6452aef14bf5acedbbdb
   flex: 1;
 }
 .header {
@@ -82,6 +86,17 @@
   height: 50px;
   border-bottom: 1px solid #bbbbbb;
 }
+<<<<<<< HEAD
+=======
+.content {
+  background-color: #e9ebee;
+  position: absolute;
+  top: 51px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+>>>>>>> 2adf8f6f33646442816b6452aef14bf5acedbbdb
 
 /* body right */
 
