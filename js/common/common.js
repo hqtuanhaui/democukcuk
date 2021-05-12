@@ -17,3 +17,17 @@ function validateDate(date) {
     return day + "/" + month + "/" + year;
   }
 }
+
+/**
+ * Format hiển thị tiền
+ * CreateBy: HQTUAN 10/05/2021
+ * @param {*} money
+ * @returns
+ */
+function formatMoney(money) {
+  if (money) {
+    return (num = money.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1."));
+  }
+  return "";
+}
+//

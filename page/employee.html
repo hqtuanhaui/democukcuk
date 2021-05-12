@@ -7,10 +7,10 @@
     <title>MISA Cuk Cuk</title>
     <link rel="stylesheet" href="../css/common/layout.css" />
     <link rel="stylesheet" href="../css/common/main.css" />
-
     <link rel="stylesheet" href="../css/common/grid.css" />
     <link rel="stylesheet" href="../css/page/customer.css" />
     <link rel="stylesheet" href="../css/common/button.css" />
+    <link rel="stylesheet" href="../css/common/dialog.css" />
   </head>
 
   <body>
@@ -94,12 +94,18 @@
               <tr>
                 <th fieldName="EmployeeCode">Mã nhân viên</th>
                 <th fieldName="FullName">Họ và tên</th>
-                <th fieldName="DateOfBirth">Ngày sinh</th>
+                <th fieldName="DateOfBirth" formatType="ddmmyyyy">Ngày sinh</th>
                 <th fieldName="GenderName">Giới tính</th>
                 <th fieldName="PhoneNumber">Số điện thoại</th>
                 <th fieldName="Address">Địa chỉ</th>
                 <th fieldName="Email">Email</th>
-                <th fieldName="Salary">Lương</th>
+                <th
+                  fieldName="Salary"
+                  formatType="Money"
+                  class="text-align-right"
+                >
+                  Lương
+                </th>
                 <th fieldName="DepartmentName">Phòng ban</th>
               </tr>
             </thead>
@@ -109,6 +115,85 @@
 
         <!-- pagination -->
         <div class="content__pagination">pagination</div>
+      </div>
+    </div>
+
+    <!-- them nhan vien -->
+    <div class="dialog">
+      <div class="dialog__modal"></div>
+
+      <div class="dialog__content">
+        <div class="dialog__header">
+          <div class="dialog__header--title">Thông tin nhân viên</div>
+          <div class="dialog__header--close">
+            <button>x</button>
+          </div>
+        </div>
+
+        <div class="dialog__body">
+          <div class="dialog__row">
+            <div class="dialog__item">
+              <label for="">Ho ten(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div class="dialog__item">
+              <label for="">Ma nhan vien(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="dialog__row">
+            <div class="dialog__item">
+              <label for="">Ho ten(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div class="dialog__item">
+              <label for="">Ma nhan vien(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="dialog__row">
+            <div class="dialog__item">
+              <label for="">Ho ten(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div class="dialog__item">
+              <label for="">Ma nhan vien(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="dialog__row">
+            <div class="dialog__item">
+              <label for="">Ho ten(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div class="dialog__item">
+              <label for="">Ma nhan vien(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="dialog__row">
+            <div class="dialog__item flex-1">
+              <label for="">Ho ten(*)</label>
+              <br />
+              <input type="text" />
+            </div>
+          </div>
+
+          <button>Luu</button>
+          <button>Huy</button>
+        </div>
       </div>
     </div>
 
