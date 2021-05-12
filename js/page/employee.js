@@ -1,16 +1,18 @@
 $(document).ready(function () {
-  new CustomerJS();
+  new EmployeeJS();
 });
 
 /**====================================================================
- * Class quản lý các sự kiện xảy ra ở trang Customer
+ * Class quản lý các sự kiện xảy ra ở trang Employee
  */
-class CustomerJS extends BaseJS {
+class EmployeeJS extends BaseJS {
   constructor() {
-    //this.loadData();
     super();
   }
 
+  /**
+   * ghi đè lại getDataUrl
+   */
   setDataUrl() {
     this.getDataUrl = "http://cukcuk.manhnv.net/v1/Employees";
   }
@@ -34,7 +36,7 @@ class CustomerJS extends BaseJS {
   delete() {}
 }
 
-/**
+/**==================================
  * Validate date sang dd/MM/yyy
  * @param {*} date
  * @returns

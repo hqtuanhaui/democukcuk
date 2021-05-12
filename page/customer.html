@@ -5,61 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MISA Cuk Cuk</title>
-    <link rel="stylesheet" href="../../css/common/layout.css" />
-    <link rel="stylesheet" href="../../css/common/main.css" />
+    <link rel="stylesheet" href="../css/common/layout.css" />
+    <link rel="stylesheet" href="../css/common/main.css" />
 
-    <link rel="stylesheet" href="../../css/common/grid.css" />
+    <link rel="stylesheet" href="../css/common/grid.css" />
     <link rel="stylesheet" href="../css/page/customer.css" />
     <link rel="stylesheet" href="../css/common/button.css" />
-    <link rel="stylesheet" href="../css/page/filter.css" />
   </head>
 
   <body>
-    <!-- left -->
-
-    <link rel="stylesheet" href="../../css/pages/dictionary/customer.css" />
-  </head>
-
-  <body>
-
     <div class="body__left">
       <div class="sidebar">
         <div class="sidebar__toggle"></div>
         <div class="sidebar__logo"></div>
       </div>
+      <!-- menu -->
       <div class="menu">
-        <div class="menu__item">
+        <a class="menu__item">
           <div class="item__icon icon--overview"></div>
           <div class="item__name">Tổng quan</div>
-        </div>
-        <div class="menu__item">
+        </a>
+        <a class="menu__item">
           <div class="item__icon icon--report"></div>
           <div class="item__name">Báo cáo</div>
-        </div>
-        <div class="menu__item">
+        </a>
+        <a class="menu__item">
           <div class="item__icon icon--overview"></div>
           <div class="item__name">Mua hàng</div>
-        </div>
-        <div class="menu__item">
+        </a>
+        <a class="menu__item" href="customer.html">
           <div class="item__icon icon--employee"></div>
           <div class="item__name">Danh mục khách hàng</div>
-        </div>
-        <div class="menu__item">
+        </a>
+        <a class="menu__item" href="employee.html">
           <div class="item__icon icon--employee"></div>
           <div class="item__name">Danh mục nhân viên</div>
-        </div>
-        <div class="menu__item">
+        </a>
+        <a class="menu__item" href="department.html">
+          <div class="item__icon icon--setting"></div>
+          <div class="item__name">Danh mục phòng ban</div>
+        </a>
+        <a class="menu__item">
           <div class="item__icon icon--setting"></div>
           <div class="item__name">Thiết lập hệ thống</div>
-        </div>
+        </a>
       </div>
     </div>
 
-
     <!-- right -->
     <div class="body__right">
-
-
       <div class="header">
         <div class="header__restaurant">
           <select id="" name="restaurant">
@@ -76,11 +70,10 @@
         </div>
       </div>
 
-
       <!-- content -->
       <div class="content">
         <div class="content__title">
-          <div class="title__name">Danh sách nhân viên</div>
+          <div class="title__name">Danh sách Khách hàng</div>
 
           <button class="content__feature btn--icon">
             <div class="feature__icon"></div>
@@ -99,20 +92,16 @@
           <table>
             <thead>
               <tr>
-                <th>Mã nhân viên</th>
-                <th>Họ và tên</th>
-                <th>Ngày sinh</th>
-                <th>Giới tính</th>
-                <th>Số điện thoại</th>
-                <th>Địa chỉ</th>
-                <th>Email</th>
-                <th>Lương</th>
-                <th>Phòng ban</th>
+                <th fieldName="EmployeeCode">Mã nhân viên</th>
+                <th fieldName="FullName">Họ và tên</th>
+                <th fieldName="DateOfBirth">Ngày sinh</th>
+                <th fieldName="GenderName">Giới tính</th>
+                <th fieldName="PhoneNumber">Số điện thoại</th>
+                <th fieldName="Address">Địa chỉ</th>
+                <th fieldName="Email">Email</th>
               </tr>
             </thead>
-            <tbody>
-              
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
 
@@ -126,9 +115,9 @@
 
     <!-- dung chung -->
     <script src="../js/common/common.js"></script>
+    <script src="../js/common/base.js"></script>
 
     <!-- script -->
     <script src="../js/page/customer.js"></script>
-
   </body>
 </html>
