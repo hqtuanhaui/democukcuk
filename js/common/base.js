@@ -1,8 +1,13 @@
+/**
+ * api: http://cukcuk.manhnv.net/swagger/index.html
+ */
+
 class BaseJS {
   constructor() {
     this.getDataUrl = null;
     this.setDataUrl();
     this.loadData();
+    this.initEvents();
   }
 
   /**
@@ -11,14 +16,53 @@ class BaseJS {
   setDataUrl() {}
 
   /**
+   * Khoi tao su kien cho tat ca button trong trang
+   */
+  initEvents() {
+    let me = this;
+    //su khien click khi nhan vao Them moi
+    $("#btnAdd").click(function () {
+      $("#dialogDetail").show().draggable();
+    });
+
+    //an form dialogDetail
+    $(".btnDialog--close").click(function () {
+      $("#dialogDetail").hide();
+    });
+
+    //load lai du lieu khi nhan Nap
+    $("#btnRefresh").click(function () {
+      me.loadData();
+    });
+
+    // Cat du lieu khi an luu
+    $("#btnSave").click(function () {
+      $("#dialogDetail").hide();
+      alert("da luu du lieu");
+      //validate du lieu
+
+      //thu thap thong tin du lieu duoc nhap => build thanh object
+
+      //goi service tuong ung thuc hien luu tru du lieu
+
+      //luu thanh cong dua ra thong bao cho nguoi dung, an form chi tiet load lai du lieu
+    });
+
+    //hien thi thong tin chi tiet khi nhan dup chuot vao mot ban ghi
+    $("table tbody").on("dblclick", "tr", function () {
+      $("#dialogDetail").show().draggable();
+    });
+  }
+
+  /**
    * Lấy dữ liệu
    */
   loadData() {
     try {
+      $("table tbody").empty();
       //danh sach cot
       var columns = $("table thead th");
       var getDataUrl = this.getDataUrl;
-
       //
       $.ajax({
         url: getDataUrl,

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/page/customer.css" />
     <link rel="stylesheet" href="../css/common/button.css" />
     <link rel="stylesheet" href="../css/common/dialog.css" />
+
+    <link rel="stylesheet" href="../css/common/jquery-ui.css" />
   </head>
 
   <body>
@@ -75,7 +77,12 @@
         <div class="content__title">
           <div class="title__name">Danh sách nhân viên</div>
 
-          <button class="content__feature btn--icon">
+          <button id="btnRefresh" class="content__feature btn--icon">
+            <div class="feature__icon"></div>
+            <div class="feature__text">Nạp lại</div>
+          </button>
+
+          <button id="btnAdd" class="content__feature btn--icon">
             <div class="feature__icon"></div>
             <div class="feature__text">Thêm nhân vien</div>
           </button>
@@ -119,39 +126,26 @@
     </div>
 
     <!-- them nhan vien -->
-    <div class="dialog">
+    <div id="dialogDetail" class="dialog">
       <div class="dialog__modal"></div>
 
       <div class="dialog__content">
         <div class="dialog__header">
           <div class="dialog__header--title">Thông tin nhân viên</div>
           <div class="dialog__header--close">
-            <button>x</button>
+            <button class="btnDialog--close">x</button>
           </div>
         </div>
 
         <div class="dialog__body">
           <div class="dialog__row">
             <div class="dialog__item">
-              <label for="">Ho ten(*)</label>
+              <label for="">Họ tên(*)</label>
               <br />
               <input type="text" />
             </div>
             <div class="dialog__item">
-              <label for="">Ma nhan vien(*)</label>
-              <br />
-              <input type="text" />
-            </div>
-          </div>
-
-          <div class="dialog__row">
-            <div class="dialog__item">
-              <label for="">Ho ten(*)</label>
-              <br />
-              <input type="text" />
-            </div>
-            <div class="dialog__item">
-              <label for="">Ma nhan vien(*)</label>
+              <label for="">Mã nhân viên(*)</label>
               <br />
               <input type="text" />
             </div>
@@ -159,12 +153,25 @@
 
           <div class="dialog__row">
             <div class="dialog__item">
-              <label for="">Ho ten(*)</label>
+              <label for="">Giới tính</label>
               <br />
               <input type="text" />
             </div>
             <div class="dialog__item">
-              <label for="">Ma nhan vien(*)</label>
+              <label for="">Ngày sinh(*)</label>
+              <br />
+              <input type="date" />
+            </div>
+          </div>
+
+          <div class="dialog__row">
+            <div class="dialog__item">
+              <label for="">Số điện thoại</label>
+              <br />
+              <input type="text" />
+            </div>
+            <div class="dialog__item">
+              <label for="">Email</label>
               <br />
               <input type="text" />
             </div>
@@ -172,12 +179,12 @@
 
           <div class="dialog__row">
             <div class="dialog__item">
-              <label for="">Ho ten(*)</label>
+              <label for="">Mức lương(*)</label>
               <br />
               <input type="text" />
             </div>
             <div class="dialog__item">
-              <label for="">Ma nhan vien(*)</label>
+              <label for="">Phòng ban</label>
               <br />
               <input type="text" />
             </div>
@@ -185,14 +192,14 @@
 
           <div class="dialog__row">
             <div class="dialog__item flex-1">
-              <label for="">Ho ten(*)</label>
+              <label for="">Địa chỉ</label>
               <br />
               <input type="text" />
             </div>
           </div>
 
-          <button>Luu</button>
-          <button>Huy</button>
+          <button id="btnSave">Lưu</button>
+          <button class="btnDialog--close">Hủy</button>
         </div>
       </div>
     </div>
@@ -203,6 +210,7 @@
     <!-- dung chung -->
     <script src="../js/common/common.js"></script>
     <script src="../js/common/base.js"></script>
+    <script src="../js/common/jquery-ui.js"></script>
 
     <!-- script -->
     <script src="../js/page/employee.js"></script>
