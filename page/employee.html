@@ -142,12 +142,12 @@
             <div class="dialog__item">
               <label for="">Họ tên(*)</label>
               <br />
-              <input type="text" />
+              <input type="text" id="txtFullName" required />
             </div>
             <div class="dialog__item">
               <label for="">Mã nhân viên(*)</label>
               <br />
-              <input type="text" />
+              <input id="txtEmployeeCode" type="text" required />
             </div>
           </div>
 
@@ -155,12 +155,16 @@
             <div class="dialog__item">
               <label for="">Giới tính</label>
               <br />
-              <input type="text" />
+              <select name="" id="cbxGenderName">
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+              </select>
             </div>
             <div class="dialog__item">
               <label for="">Ngày sinh(*)</label>
               <br />
-              <input type="date" />
+              <input id="dtDateOfBirth" type="date" required />
             </div>
           </div>
 
@@ -168,12 +172,12 @@
             <div class="dialog__item">
               <label for="">Số điện thoại</label>
               <br />
-              <input type="text" />
+              <input id="txtPhoneNumber" type="number" />
             </div>
             <div class="dialog__item">
               <label for="">Email</label>
               <br />
-              <input type="text" />
+              <input id="txtEmail" type="email" />
             </div>
           </div>
 
@@ -181,12 +185,12 @@
             <div class="dialog__item">
               <label for="">Mức lương(*)</label>
               <br />
-              <input type="text" />
+              <input type="number" id="txtSalary" required />
             </div>
             <div class="dialog__item">
               <label for="">Phòng ban</label>
               <br />
-              <input type="text" />
+              <input type="text" id="txtDepartment" />
             </div>
           </div>
 
@@ -194,7 +198,7 @@
             <div class="dialog__item flex-1">
               <label for="">Địa chỉ</label>
               <br />
-              <input type="text" />
+              <input id="txtAddress" type="text" />
             </div>
           </div>
 

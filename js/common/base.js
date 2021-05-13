@@ -38,12 +38,41 @@ class BaseJS {
     // Cat du lieu khi an luu
     $("#btnSave").click(function () {
       $("#dialogDetail").hide();
-      alert("da luu du lieu");
       //validate du lieu
 
       //thu thap thong tin du lieu duoc nhap => build thanh object
+      var employee = {
+        employeeCode: $("#txtEmployeeCode").val(),
+        fullName: $("#txtFullName").val(),
+        dateOfBirth: $("#dtDateOfBirth").val(),
+        phoneNumber: $("#txtPhoneNumber").val(),
+        email: $("#txtEmail").val(),
+        address: $("#txtAddress").val(),
+        salary: $("#txtSalary").val(),
+      };
+      console.log(employee);
 
       //goi service tuong ung thuc hien luu tru du lieu
+      $.ajax({
+        url: "http://cukcuk.manhnv.net/v1/Employees",
+        method: "POST",
+        async: true,
+        data: JSON.stringify(employee),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: true,
+        },
+        contentType: "application/json;charset=utf-8",
+        dataType: "json",
+      })
+        .done(function (res) {
+          console.log("done");
+          console.log(res);
+        })
+        .fail(function (res) {
+          console.log("fail");
+          console.log(res);
+        });
 
       //luu thanh cong dua ra thong bao cho nguoi dung, an form chi tiet load lai du lieu
     });
@@ -52,9 +81,40 @@ class BaseJS {
     $("table tbody").on("dblclick", "tr", function () {
       $("#dialogDetail").show().draggable();
     });
+
+    /**-----------------------------------------------
+     * validate nhap thong tin
+     * CreateBy
+     */
+    $("input[required]").blur(function () {
+      //kiem tra du lieu nhap, neu trong thi canh bao
+      var value = $(this).val();
+      if (!value) {
+        $(this).addClass("border--red");
+        $(this).attr("title", "Trường này không được phép để trống!");
+      } else {
+        $(this).removeClass("border--red");
+      }
+    });
+
+    /**-----------------------------------------------
+     * validate email dung dinh dang
+     * CreateBy
+     */
+    $('input[type="email"]').blur(function () {
+      var filter =
+        /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      var value = $(this).val();
+      if (!filter.test(value)) {
+        $(this).addClass("border--red");
+        $(this).attr("title", "Email khong dung dinh dang!");
+      } else {
+        $(this).removeClass("border--red");
+      }
+    });
   }
 
-  /**
+  /**--------------------------------------------------
    * Lấy dữ liệu
    */
   loadData() {
